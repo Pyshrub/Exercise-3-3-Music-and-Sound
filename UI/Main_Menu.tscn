@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://o4fh04n0mjm5"]
+[gd_scene load_steps=6 format=3 uid="uid://o4fh04n0mjm5"]
 
 [ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1"]
 [ext_resource type="Theme" uid="uid://crrif6721qgok" path="res://UI/UI.tres" id="2"]
 [ext_resource type="PackedScene" uid="uid://c7in5g1hk73e1" path="res://Ball/Ball.tscn" id="4"]
 [ext_resource type="Script" path="res://UI/Boundary.gd" id="5"]
+[ext_resource type="AudioStream" uid="uid://dpd7dmuvqbs0r" path="res://Hit 3.mp3" id="5_niss0"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -35,7 +36,8 @@ position = Vector2(200, 200)
 linear_velocity = Vector2(800, 550)
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -200.0
@@ -73,6 +75,13 @@ offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
+
+[node name="Ball_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_niss0")
+
+[node name="Ball2" parent="." instance=ExtResource("4")]
+position = Vector2(760, 560)
+linear_velocity = Vector2(-100, -500)
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
