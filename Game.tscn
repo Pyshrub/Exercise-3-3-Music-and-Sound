@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://cb6abwxodebx1" path="res://UI/HUD.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://d03l3yccdo8fa" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Camera.gd" id="9"]
-[ext_resource type="AudioStream" uid="uid://cq0eevd4jquir" path="res://Synth.mp3" id="11_lxe08"]
-[ext_resource type="AudioStream" uid="uid://dpv7gueec02fx" path="res://Hit 1.mp3" id="12_exqc2"]
-[ext_resource type="AudioStream" uid="uid://bof8yxb2lpjtb" path="res://Hit 2.mp3" id="13_ybo51"]
-[ext_resource type="AudioStream" uid="uid://dpd7dmuvqbs0r" path="res://Hit 3.mp3" id="14_cc415"]
+[ext_resource type="AudioStream" uid="uid://cq0eevd4jquir" path="res://Assets/Synth.mp3" id="11_hautn"]
+[ext_resource type="AudioStream" uid="uid://dpv7gueec02fx" path="res://Assets/Hit 1.mp3" id="12_srmby"]
+[ext_resource type="AudioStream" uid="uid://bof8yxb2lpjtb" path="res://Assets/Hit 2.mp3" id="13_xxcsb"]
+[ext_resource type="AudioStream" uid="uid://dpd7dmuvqbs0r" path="res://Assets/Hit 3.mp3" id="14_yb5h5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(200, 1000)
@@ -84,14 +84,14 @@ anchor_mode = 0
 script = ExtResource("9")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_lxe08")
+stream = ExtResource("11_hautn")
 autoplay = true
 
 [node name="Ball_Sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_exqc2")
+stream = ExtResource("12_srmby")
 
 [node name="Wall_Sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_ybo51")
+stream = ExtResource("13_xxcsb")
 
 [node name="Brick_Sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_cc415")
+stream = ExtResource("14_yb5h5")

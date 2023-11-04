@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://crrif6721qgok" path="res://UI/UI.tres" id="2"]
 [ext_resource type="PackedScene" uid="uid://c7in5g1hk73e1" path="res://Ball/Ball.tscn" id="4"]
 [ext_resource type="Script" path="res://UI/Boundary.gd" id="5"]
-[ext_resource type="AudioStream" uid="uid://dpd7dmuvqbs0r" path="res://Hit 3.mp3" id="5_niss0"]
+[ext_resource type="AudioStream" uid="uid://dpd7dmuvqbs0r" path="res://Assets/Hit 3.mp3" id="5_wnd1h"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -41,6 +41,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 text = "Brick Breaker"
 horizontal_alignment = 1
@@ -77,7 +79,7 @@ grow_vertical = 2
 text = "Quit"
 
 [node name="Ball_Sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_niss0")
+stream = ExtResource("5_wnd1h")
 
 [node name="Ball2" parent="." instance=ExtResource("4")]
 position = Vector2(760, 560)
